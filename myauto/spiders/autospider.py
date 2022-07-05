@@ -43,7 +43,10 @@ class MyAutoSpider(Spider):
         # img_path = "/".join(list(num[::-1][:5]))
         data = {}
         api_response = response.json()
-        del api_response['data']['info']['matching_parts'] # Remove product offers
+        try:
+            del api_response['data']['info']['matching_parts'] # Remove product offers
+        except:
+            pass # Ignore
         data['inner_api_call'] = api_response['data']# Response has to be json
 
         data['statemet_card'] = statement_card
