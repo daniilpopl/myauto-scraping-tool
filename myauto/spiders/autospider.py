@@ -9,7 +9,7 @@ import re
 import requests
 from tqdm.auto import tqdm
 
-MAX_PAGES = 10279
+MAX_PAGES = 12283
 page_num_pat = re.compile(r'\d+')
 class MyAutoSpider(Spider):
     name = 'myauto'
