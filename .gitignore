@@ -1,3 +1,6 @@
 *.jl
 *.pyc
 *.log
+readme.md
+vin_records.csv
+readme.md
